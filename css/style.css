@@ -193,6 +193,27 @@ h1.titulo {
 /*proyectos*/
 .proyectos {
   text-align: center;
+  border-color: var(--primario);
+
+  transition: box-shadow 0.3s ease;
+  background-color: var(--grisclaro);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+
+.proyectos h2,
+.proyectos p {
+  margin: 1rem;
+}
+
+.proyectos:hover {
+  /* funciona igual que text-shadox en donde se indica cuanto se va a desplzar la sombra hacia arriba, abajo y su difuminacion.*/
+  /* 
+    box-shadow: derecha abajo difuminacion color
+    */
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 /*RESPONSIVE*/

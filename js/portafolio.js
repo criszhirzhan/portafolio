@@ -10,34 +10,46 @@ const btnCloseModel = document.querySelector('.close-modal');
 
 var portfolioData = [
   {
-    title: 'Nintendo Disney Art Academy',
+    title:
+      'Aplicación Móvil para el Agendamiento de Citas de Consultas Médicas Utilizando Técnicas de Procesamiento de Lenguaje Natural',
     subtitle: "Promo website for Nintendo's 3DS game",
     description:
-      'Nintendo Disney Art Academy is a website designed by <a href="http://enterthestudio.com/">Enter the Studio</a> for Nintendo\'s 3DS game. It was developed using technologies like GSAP, CSS3, slick.js, and JQuery. It was also customized and tested on many modern devices including the 3DS console.',
+      'Fue desarrollado usando tecnologías como Spring, PostgreSQL, AWS, Ionic y Rasa Framework, se implemento la autenticación de los usuarios por tokens para acceder a servicios de escritura y lectura privados, para la persistencia en la base de datos se usó Spring Data JPA.',
     code: 'disney',
     video: 'https://youtube.com/shorts/NPh3SKf0OWA',
     buttons: [false, false, false, 'http://artacademy.nintendo.com/disney/'],
   },
   {
-    title: 'Fridge Binge',
-    subtitle: 'Website for a retro games startup',
+    title:
+      'Aplicación Móvil para el Agendamiento de Citas de Consultas Médicas Utilizando Técnicas de Procesamiento de Lenguaje Natural',
+    subtitle: "Promo website for Nintendo's 3DS game",
     description:
-      "Fridge Binge was developed and designed as a gaming site using AngularJS, Node.js, MongoDB, Express, Handlebars, Passport, Bcrypt, and RESTful APIs. It's Auth sytem was later migrated to Angular 2 and Firebase as a future proof upgrade.",
-    code: 'fridgebinge',
-    video: 'https://www.youtube.com/watch?v=cwEptPBYVvk',
-    buttons: ['desktop', false, false, 'http://www.fridgebinge.com'],
+      'Fue desarrollado usando tecnologías como Spring, PostgreSQL, AWS, Ionic y Rasa Framework, se implemento la autenticación de los usuarios por tokens para acceder a servicios de escritura y lectura privados, para la persistencia en la base de datos se usó Spring Data JPA.',
+    code: 'disney',
+    video: 'https://youtube.com/shorts/NPh3SKf0OWA',
+    buttons: [false, false, false, 'http://artacademy.nintendo.com/disney/'],
+  },
+  {
+    title:
+      'Aplicación Móvil para el Agendamiento de Citas de Consultas Médicas Utilizando Técnicas de Procesamiento de Lenguaje Natural',
+    subtitle: "Promo website for Nintendo's 3DS game",
+    description:
+      'Fue desarrollado usando tecnologías como Spring, PostgreSQL, AWS, Ionic y Rasa Framework, se implemento la autenticación de los usuarios por tokens para acceder a servicios de escritura y lectura privados, para la persistencia en la base de datos se usó Spring Data JPA.',
+    code: 'disney',
+    video: 'https://youtube.com/shorts/NPh3SKf0OWA',
+    buttons: [false, false, false, 'http://artacademy.nintendo.com/disney/'],
   },
 ];
 
 /* <iframe  src="https://www.youtube.com/embed/NPh3SKf0OWA" frameborder="0" allowfullscreen></iframe> */
 
 portfolioData.forEach(element => {
-  seccionPortafolio += `<section class="proyectos"'>
+  seccionPortafolio += `<article class="proyectos"'>
   <h3>${element.title}</h3>
   <p>
     ${element.description}
   </p>
-</section>`;
+</article>`;
 });
 
 portafolio.innerHTML = seccionPortafolio;
