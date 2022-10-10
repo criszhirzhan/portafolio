@@ -4,7 +4,7 @@
   --blanco: #fff;
   --oscuro: #212121;
   --primario: #ffc107;
-  --secundario: #0097a7;
+  --secundario: #00b0c7;
   --terciario: #757575;
   --grisclaro: #dfe9f3;
 }
@@ -67,7 +67,8 @@ iframe {
   -moz-box-shadow: -1px -1px 15px 3px rgba(173, 173, 173, 1);
   box-shadow: -1px -1px 15px 3px rgba(173, 173, 173, 1);
   background-color: var(--blanco);
-  padding: 2rem;
+
+  padding: 2rem 0 0 0;
   border-radius: 1rem;
 }
 
@@ -196,7 +197,11 @@ h1.titulo {
   border-color: var(--primario);
 
   transition: box-shadow 0.3s ease;
-  background-color: var(--grisclaro);
+  background-image: linear-gradient(
+    to top,
+    var(--grisclaro) 0%,
+    var(--blanco) 100%
+  );
   margin: 1rem 0;
   border-radius: 0.5rem;
   padding: 0.25rem 0;
@@ -214,6 +219,21 @@ h1.titulo {
     box-shadow: derecha abajo difuminacion color
     */
   box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+#skillset {
+  padding: 1rem;
+  background-color: var(--secundario);
+  color: var(--blanco);
+  width: 100%;
+}
+
+#portaf {
+  padding: 1rem;
+}
+
+#exp {
+  padding: 1rem;
 }
 
 /*RESPONSIVE*/
