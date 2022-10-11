@@ -8,6 +8,8 @@
   --secundario-dark: #00b0c7;
   --terciario: #757575;
   --grisclaro: #dfe9f3;
+  --black: #323333;
+  --black2: #2a2b2b;
 }
 
 /* Unidad de medida rem es recomendada para que el tamaño de fuente se adapte a los diferentes dispositivos ya que este se creo con esa finalidad */
@@ -38,6 +40,7 @@ body {
     var(--grisclaro) 0%,
     var(--blanco) 100%
   );
+  text-align: center;
 }
 
 /*Es recomendable estrusturar de los selectores mas generales a los mas especificos*/
@@ -239,10 +242,10 @@ h1.titulo {
 }
 
 #skillset > div {
-  grid-gap: 1rem;
+  grid-gap: 1.2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 1rem;
+  margin: 1.6rem;
 }
 #skillset img {
   border-radius: 1rem;
@@ -279,6 +282,17 @@ h1.titulo {
   margin-left: -5px;
   position: absolute;
   top: 100%;
+}
+
+footer {
+  background: linear-gradient(var(--black), var(--black2));
+  padding: 2rem 0;
+  color: var(--blanco);
+  align-items: center;
+}
+
+small {
+  font-size: 80%;
 }
 
 /*RESPONSIVE*/
