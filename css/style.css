@@ -4,7 +4,8 @@
   --blanco: #fff;
   --oscuro: #212121;
   --primario: #ffc107;
-  --secundario: #00b0c7;
+  --secundario: #00bdd6;
+  --secundario-dark: #00b0c7;
   --terciario: #757575;
   --grisclaro: #dfe9f3;
 }
@@ -96,7 +97,8 @@ h1.titulo {
 }
 
 .boton {
-  background-color: var(--secundario);
+  /*linear-gradient() crea una imagen que consiste en una transición progresiva entre dos o más colores a lo largo de una línea recta*/
+  background: linear-gradient(var(--secundario), var(--secundario-dark));
   color: var(--blanco);
   padding: 1rem 3rem;
   margin-top: 3rem;
@@ -110,7 +112,7 @@ h1.titulo {
 }
 
 .nav-bg {
-  background-color: var(--secundario);
+  background: linear-gradient(var(--secundario), var(--secundario-dark));
 }
 
 .navegacion-principal {
@@ -223,9 +225,9 @@ h1.titulo {
 
 #skillset {
   padding: 1rem;
-  background-color: var(--secundario);
+  background: linear-gradient(var(--secundario), var(--secundario-dark));
   color: var(--blanco);
-  width: 100%;
+  /* max-width: 40rem; */
 }
 
 #portaf {
@@ -234,6 +236,49 @@ h1.titulo {
 
 #exp {
   padding: 1rem;
+}
+
+#skillset > div {
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem;
+}
+#skillset img {
+  border-radius: 1rem;
+  cursor: context-menu;
+  max-width: 7rem;
+}
+#skillset > div > div {
+  position: relative;
+}
+#skillset span {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  left: 50%;
+  opacity: 0;
+  padding: 0.5rem 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  top: -40px;
+  transform: translate(-60px, 10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 120px;
+  z-index: 1;
+}
+#skillset > div > div:hover span {
+  opacity: 1;
+  transform: translate(-60px);
+}
+#skillset span:after {
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.75);
+  content: '';
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  top: 100%;
 }
 
 /*RESPONSIVE*/
@@ -260,7 +305,6 @@ h1.titulo {
 
 @media (min-width: 768px) {
   .portafolio,
-  .skills,
   .experiencia {
     display: grid;
     padding: 1rem;
