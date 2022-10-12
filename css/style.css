@@ -382,7 +382,7 @@ small {
 
 /*Formato de la ventana*/
 .modalbox {
-  width: 400px;
+  width: 300px;
   position: relative;
   padding: 5px 20px 13px 20px;
   background: #fff;
@@ -390,6 +390,12 @@ small {
   -webkit-transition: all 500ms ease-in;
   -moz-transition: all 500ms ease-in;
   transition: all 500ms ease-in;
+}
+
+@media (min-width: 768px) {
+  .modalbox {
+    width: 400px;
+  }
 }
 
 /*Movimientos*/
