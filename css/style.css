@@ -382,7 +382,7 @@ small {
 
 /*Formato de la ventana*/
 .modalbox {
-  width: 300px;
+  width: 350px;
   position: relative;
   padding: 5px 20px 13px 20px;
   background: #fff;
