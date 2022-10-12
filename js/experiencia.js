@@ -3,23 +3,61 @@
 // document.getElementById("experiencia").innerHTML =
 //   "<h1 id='exp'>HOLA CRIS</h1>";
 
-let student = [
+const datosExperiencia = document.getElementById('datosExperiencia');
+const seccionExperiencia = document.getElementById('experiencia');
+
+let experiencia = '';
+let modals = '';
+
+let experienciaData = [
   {
-    name: 'Molecule Man',
-    age: 29,
-    secretIdentity: 'Dan Jukes',
-    powers: ['Radiation resistance', 'Turning tiny', 'Radiation blast'],
+    id: 1,
+    cargo: 'Desarrollador de aplicaciones y Diseñador de personajes 3D',
+    empresa:
+      'Grupo de Investigación en Cloud Computing, Smart Cities & High Performance (GIHP4C)',
+    descripcion:
+      'Desarrollo de una aplicación móvil para el agendamiento de Citas de consultas médicas utilizando técnicas de Procesamiento de lenguaje natural.Modelado de personajes 3D usando Blender y ScketchUp, animaciones de personajes en 3D en Unity  para el proyecto “Educación vial de peatones yconductores de la ciudad de Cuenca a través de sistemas de realidad virtual”.',
+    fechaIncio: 'Enero 2020',
+    fechaFin: 'Febrero 2022',
+    logo: './assets/img/experience/GIHP4.png',
   },
   {
-    name: 'Madame Uppercut',
-    age: 39,
-    secretIdentity: 'Jane Wilson',
-    powers: ['Million tonne punch', 'Damage resistance', 'Superhuman reflexes'],
+    id: 2,
+    cargo: 'Pasante en desarrollo web',
+    empresa: 'EMOV EP',
+    descripcion:
+      'Implementación de plataforma web educativa Moodle para educación vial.',
+    fechaIncio: 'Abril 2021',
+    fechaFin: 'Agosto 2021',
+    logo: './assets/img/experience/EMOV.png',
   },
 ];
 
 //console.log(student);
 
-student.forEach(element => {
-  console.log(element.name);
+experienciaData.forEach(element => {
+  experiencia += `<a class="eins-modal-button" href="#modal${element.id}"
+    ><img src="${element.logo}" />
+    <h4>
+    ${element.empresa}.
+    </h4></a
+    >`;
 });
+
+experienciaData.forEach(element => {
+  modals += `<div id="modal${element.id}" class="modalmask">
+      <div class="modalbox movedown">
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>${element.empresa}</h2>
+        <p>
+         ${element.descripcion}
+        </p>
+        <p>
+          ${element.cargo}
+        </p>
+      </div>
+    </div>`;
+});
+//datosExperiencia.innerHTML = modals;
+//seccionExperiencia.innerHTML = modals;
+datosExperiencia.innerHTML = experiencia + modals;
