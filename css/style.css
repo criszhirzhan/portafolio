@@ -10,6 +10,7 @@
   --grisclaro: #dfe9f3;
   --black: #323333;
   --black2: #2a2b2b;
+  --gray3: #4b4c4d;
 }
 
 /* Unidad de medida rem es recomendada para que el tamaño de fuente se adapte a los diferentes dispositivos ya que este se creo con esa finalidad */
@@ -40,6 +41,7 @@ body {
     var(--grisclaro) 0%,
     var(--blanco) 100%
   );
+  color: var(--gray3);
   text-align: center;
 }
 
@@ -65,6 +67,7 @@ h3 {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 iframe {
@@ -298,8 +301,10 @@ h1.titulo {
   width: 150px;
 }
 #experiencia h4 {
-  font-size: 1rem;
+  color: var(--gray3);
+  font-size: 1.5rem;
   margin-bottom: 3rem;
+  letter-spacing: 0.3rem;
 }
 
 #experiencia img:hover {
