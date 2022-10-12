@@ -37,14 +37,12 @@ let experienciaData = [
 
 experienciaData.forEach(element => {
   experiencia += `<a class="eins-modal-button" href="#modal${element.id}"
-    ><img src="${element.logo}" />
-    <h4>
-    ${element.empresa}.
-    </h4></a
-    >`;
-});
-
-experienciaData.forEach(element => {
+  ><img src="${element.logo}" />
+  
+  <h4>
+  ${element.empresa}.
+  </h4></a
+  >`;
   modals += `<div id="modal${element.id}" class="modalmask">
       <div class="modalbox movedown">
         <a href="#close" title="Close" class="close">X</a>

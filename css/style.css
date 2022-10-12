@@ -69,7 +69,33 @@ a {
   background-color: transparent;
   text-decoration: none;
 }
-
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+hr {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--secundario),
+    transparent
+  );
+  border: 0;
+  height: 0.1rem;
+  max-width: 100%;
+}
+section.even hr {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--blanco),
+    transparent
+  );
+}
+section hr {
+  margin-bottom: 5rem;
+}
 iframe {
   width: 80%;
 }
@@ -203,6 +229,23 @@ h1.titulo {
   align-items: flex-end;
 }
 
+/*Contact*/
+#social-media img {
+  background-color: var(--blanco);
+  border-radius: 10rem;
+  margin: 1rem;
+  transition: all 0.3s ease;
+}
+#social-media a {
+  text-decoration: none;
+}
+#linkedin:hover {
+  background-color: #0077b5;
+}
+#github:hover {
+  background-color: #000;
+}
+
 /*proyectos*/
 .proyectos {
   text-align: center;
@@ -233,7 +276,8 @@ h1.titulo {
   box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
-#skillset {
+#skillset,
+#contacto {
   padding: 1rem;
   background: linear-gradient(var(--secundario), var(--secundario-dark));
   color: var(--blanco);
@@ -304,6 +348,7 @@ h1.titulo {
   color: var(--gray3);
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  margin-top: 1rem;
   letter-spacing: 0.3rem;
 }
 

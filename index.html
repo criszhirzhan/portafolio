@@ -43,7 +43,7 @@
     </div>
 
     <section id="hero1" class="hero">
-      <video autoplay loop muted id="bg-video">
+      <video autoplay loop muted playsinline id="bg-video">
         <source src="./assets/res/bg.mp4" type="video/mp4" />
       </video>
       <div class="contenido-hero">
@@ -70,89 +70,49 @@
           </svg>
           <p>Paute, Azuay</p>
         </div>
-        <a class="boton" href="#contacto">Contactar</a>
+        <!-- <a class="boton" href="#contacto">Contactar</a> -->
       </div>
     </section>
     <main class="contenedor sombra">
       <section class="portaf" id="portofolio">
         <h2>PORTAFOLIO</h2>
+        <hr />
         <div id="portfl" class="portafolio"></div>
       </section>
 
-      <section id="skillset">
+      <section id="skillset" class="even">
         <h2>SKILLSET</h2>
-        <div>
-          <div>
-            <img src="./assets/img/html.png" />
-            <span class="tooltip">HTML</span>
-          </div>
-          <div>
-            <img src="./assets/img/angular.png" alt="" />
-            <span class="tooltip">Angular</span>
-          </div>
-          <div>
-            <img src="./assets/img/java.png" />
-            <span class="tooltip">Java</span>
-          </div>
-          <div>
-            <img src="./assets/img/js.png" alt="" />
-            <span class="tooltip">JavaScript</span>
-          </div>
-          <div>
-            <img src="./assets/img/python.png" alt="" />
-            <span class="tooltip">Python</span>
-          </div>
-        </div>
+        <hr />
+        <div id="skills"></div>
       </section>
 
       <section id="experiencia">
         <h2>EXPERIENCIA</h2>
+        <hr />
         <div id="datosExperiencia"></div>
-
-        <!-- <div id="modal1" class="modalmask">
-          <div class="modalbox movedown">
-            <a href="#close" title="Close" class="close">X</a>
-            <h2>DESLIZAR 1</h2>
-            <p>
-              La ventana modal aparece por arriba y se desliza hasta su
-              posición. Un efecto simple pero elegante.
-            </p>
-            <p>
-              Aquí puedes incluir cualquier cosa como vídeos, mapas,
-              formularios...
-            </p>
-          </div>
-        </div>
-
-        <div id="modal2" class="modalmask">
-          <div class="modalbox movedown">
-            <a href="#close" title="Close" class="close">X</a>
-            <h2>DESLIZAR 2</h2>
-            <p>
-              La ventana modal aparece por arriba y se desliza hasta su
-              posición. Un efecto simple pero elegante.
-            </p>
-            <p>
-              Aquí puedes incluir cualquier cosa como vídeos, mapas,
-              formularios...
-            </p>
-          </div>
-        </div> -->
+      </section>
+      <section id="contacto" class="even">
+        <h2>Contacto</h2>
+        <hr />
+        <nav id="social-media">
+          <a
+            href="https://www.linkedin.com/in/christian-zhirzhan/"
+            target="_blank"
+            ><img id="linkedin" src="./assets/img/contact/linkedin.png" alt=""
+          /></a>
+          <a href="https://github.com/criszhirzhan" target="_blank"
+            ><img id="github" src="./assets/img/contact/github.png" alt=""
+          /></a>
+        </nav>
       </section>
     </main>
-
-    <!-- <section id="contacto">
-      <h4>Contacto</h4>
-    </section> -->
 
     <footer>
       <small>Todos los derechos reservados, Christian Zhirzhan</small>
     </footer>
-
-    <button onclick="openResource('h')"></button>
   </body>
 
-  <!-- <script src="./js/experiencia.js"></script> -->
   <script src="./js/portafolio.js"></script>
   <script src="./js/experiencia.js"></script>
+  <script src="./js/skills.js"></script>
 </html>
