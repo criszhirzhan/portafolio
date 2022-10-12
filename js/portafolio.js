@@ -17,6 +17,7 @@ var portfolioData = [
       'Fue desarrollado usando tecnologías como Spring, PostgreSQL, AWS, Ionic y Rasa Framework, se implemento la autenticación de los usuarios por tokens para acceder a servicios de escritura y lectura privados, para la persistencia en la base de datos se usó Spring Data JPA.',
     code: 'disney',
     video: 'https://youtube.com/shorts/NPh3SKf0OWA',
+    repository: 'https://github.com/criszhirzhan/cita_doc_front',
     buttons: [false, false, false, 'http://artacademy.nintendo.com/disney/'],
   },
 ];
@@ -29,7 +30,11 @@ portfolioData.forEach(element => {
   <p>
     ${element.description}
   </p>
+  <button onclick="openResource('${element.video}')" type="button" class="btn btn-outline-info">Video</button>
+  <button onclick="openResource('${element.repository}')" type="button" class="btn btn-outline-secondary">Repositorio</button>
 </article>`;
 });
-
+const openResource = link => {
+  window.open(link);
+};
 portafolio.innerHTML = seccionPortafolio;
