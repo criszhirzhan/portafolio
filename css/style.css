@@ -63,6 +63,10 @@ h3 {
   text-align: center;
 }
 
+a {
+  background-color: transparent;
+}
+
 iframe {
   width: 80%;
 }
@@ -237,10 +241,6 @@ h1.titulo {
   padding: 1rem;
 }
 
-#exp {
-  padding: 1rem;
-}
-
 #skillset > div {
   grid-gap: 1.2rem;
   display: grid;
@@ -282,6 +282,29 @@ h1.titulo {
   margin-left: -5px;
   position: absolute;
   top: 100%;
+}
+
+#experiencia {
+  padding: 1rem;
+}
+#experiencia img {
+  background: #fff;
+  border: 5px solid var(--secundario);
+  border-radius: 25px;
+  cursor: pointer;
+  height: 150px;
+  padding: 2rem;
+  transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+}
+#experiencia h4 {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+#experiencia img:hover {
+  border-radius: 0;
+  box-shadow: 0 0 10px 1px var(--gray2);
 }
 
 footer {
@@ -328,4 +351,85 @@ small {
     grid-template-columns: repeat(3, 1fr); /*Crea tres veces 1fr = 3.33%*/
     column-gap: 10px; /*serpa 10px entre las columnas*/
   }
+}
+
+/*MODAL*/
+/*Efecto*/
+.modalmask {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalmask:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalbox {
+  width: 400px;
+  position: relative;
+  padding: 5px 20px 13px 20px;
+  background: #fff;
+  border-radius: 3px;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+}
+
+/*Movimientos*/
+.movedown {
+  margin: 0 auto;
+}
+.rotate {
+  margin: 10% auto;
+  -webkit-transform: scale(-5, -5);
+  transform: scale(-5, -5);
+}
+.resize {
+  margin: 10% auto;
+  width: 0;
+  height: 0;
+}
+.modalmask:target .movedown {
+  margin: 10% auto;
+}
+.modalmask:target .rotate {
+  transform: rotate(360deg) scale(1, 1);
+  -webkit-transform: rotate(360deg) scale(1, 1);
+}
+
+.modalmask:target .resize {
+  width: 400px;
+  height: 200px;
+}
+
+/*Boton de cerrar*/
+.close {
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  top: 1px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.close:hover {
+  background: #faac58;
+  color: #222;
 }
