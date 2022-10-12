@@ -36,6 +36,14 @@ var skillsData = [
     nombre: 'PYTHON',
     logo: './assets/img/skills/python.png',
   },
+  {
+    nombre: 'GIT',
+    logo: './assets/img/skills/git.png',
+  },
+  {
+    nombre: 'IONIC',
+    logo: './assets/img/skills/ionic.png',
+  },
 ];
 
 skillsData.forEach(element => {
