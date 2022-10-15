@@ -44,6 +44,10 @@ var skillsData = [
     nombre: 'IONIC',
     logo: './assets/img/skills/ionic.png',
   },
+  {
+    nombre: 'SPRING BOOT',
+    logo: './assets/img/skills/springBoot.png',
+  },
 ];
 
 skillsData.forEach(element => {

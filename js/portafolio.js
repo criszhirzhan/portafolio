@@ -20,7 +20,7 @@ var portfolioData = [
     repository: 'https://github.com/criszhirzhan/cita_doc_front',
   },
   {
-    title: 'Aplicación para la Gestión de Contactos',
+    title: 'Aplicación Web para la Gestión de Contactos',
     description:
       'Aplicación JEE basado en Servlets, JSP y JPA para el intercambio de datos en un modelo de tres capas aplicando los patrones diseño de software MVC y DAO. ',
     video: ' ',
@@ -29,13 +29,21 @@ var portfolioData = [
       'https://github.com/criszhirzhan/Practica-de-laboratorio-02-Servlets-JSP-y-JPA',
   },
   {
-    title: 'Aplicación para Correo Electrónico',
+    title: 'Aplicación Web para Correo Electrónico',
     description:
       'Fue desarrollado usando tecnologías como PHP, CSS, HTML, Ajax y una base de datos MySQL. ',
     video: ' ',
     disabled: true,
     repository:
       'https://github.com/criszhirzhan/Practica04-Mi-Correo-Electronico',
+  },
+  {
+    title: 'Aplicación Web para la Gestión de Productos de una Bodega',
+    description:
+      'Fue desarrollado usando tecnologías como EJB, JSF, JPA y MySQL.',
+    video: ' ',
+    disabled: true,
+    repository: 'https://github.com/aReinoso007/Practica-4',
   },
 ];
 
